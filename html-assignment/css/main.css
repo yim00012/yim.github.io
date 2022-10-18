@@ -20,11 +20,15 @@ ul {
     list-style-type: square;
 }
 
-li:nth-child(odd) {
+article li:nth-child(odd) {
     background-color: lightgray;
 }
 
-a[href="notes.html"] {
+nav ul {
+    list-style-type: none;
+}
+
+a[href="notes.html"], a[href="index.html"] {
     color: #acd2ed;
     text-decoration: none;
     background-color: #4a306d;
