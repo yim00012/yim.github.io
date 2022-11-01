@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #AAD4CF;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}
+
+/* sets bg color and width same as bg image */
+.wrapper {
+    background-color: #D4E9E7;
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.site-title {
+    /* background properties */
+    background-image: url(../images/lone-starfish-wide.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 340px;
+    /* text properties */
+    color: white;
+    text-align: center;
+    font-size: 1.7em;
+    margin: 0;
+}
+
+/* puts text at the bottom */
+header h1 {
+    padding-top: 200px;
+}
+
+/* nav properties */
+nav ul li {
+    width: 32%;
+    display: inline-block;
+    text-align: center;
+    /* adds right border */
+    border-right: 1px solid black;
+    margin-bottom: 2em;
+}
+
+/* right border except the last item */
+nav ul li:last-child {
+    border-right: none;
+  }
+
+/* clears pre-set and make text black */
+nav a {
+    text-decoration: none;
+    font-size: 1.7em;
+    color: black;
+}
+
+nav a:hover {
+    background-color: #AAD4CF;
+}
+
+/* main contents properties */
+article {
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 1rem;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+/* image floating on left and text wrapping around it */
+article img {
+    width: 250px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 0 auto;
+    line-height: 1.3rem;
+}
+
+h3 {
+    font-size: 1.7em;
+}
+
+article ul li {
+    margin: 0;
+    padding: 0;
+}
+
+/* contact box properties */
+.box {
+    border: solid;
+    padding: 15px;
+}
+
+.box h4 {
+    font-size: 1.3em;
+    font-weight: normal;
+}
+
+.contact input {
+    width: 99%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-color: lightgrey;
+}
+
+.contact textarea {
+    width: 99%;
+    height: 5em;
+    margin-top: 5px;
+    overflow: auto;
+    box-shadow: 0px 0px 1px 1px grey;
+    border-color: white;
+}
+
+/* send button properties */
+button {
+    background-color: #D4E9E7;
+    font-size: 0.7em;
+    padding: 10px;
+    margin-top: 15px;
+    border: solid;
+}
+
+button:hover {
+    background-color: #AAD4CF;
+}
+
+/* sets footer text to the right */
+footer {
+    text-align: right;
+    padding: 30px;
+}
