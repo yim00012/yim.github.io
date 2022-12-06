@@ -24,7 +24,7 @@ article li:nth-child(odd) {
     background-color: lightgray;
 }
 
-nav ul {
+nav ul li {
     list-style-type: none;
 }
 
