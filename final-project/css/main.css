@@ -1,0 +1,161 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Overall preset */
+html {
+    box-sizing: border-box;
+ }
+
+ *,
+ *:before,
+ *:after {
+    box-sizing: inherit;
+ }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: auto;
+}
+
+div {
+    max-width: 1200px;
+    position: relative;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* set the content wrapper */
+header, footer {
+    background-color: #222;
+}
+
+.wrapper {
+    width: 100%;
+    margin: auto;
+}
+
+/* Nav bar area */
+.nav {
+    background-color: #222;
+    padding: 10px;
+}
+
+#logo {
+    margin: 1rem 0;
+    width: auto;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #c78c06;
+    /* background-color: #c78c06; */
+    padding: 1rem;
+}
+
+li a:hover, a:active {
+    background-color: #c78c06;
+    color: #222;
+}
+
+/* search bar */
+
+/* main banner */
+.banner img {
+    position: relative;
+    width: 100%;
+}
+
+.container-banner {
+    position: absolute;
+    background-color: rgba(22, 22, 22, .7) ;
+    color: white;
+    top: 10%;
+    bottom: 10%;
+    padding: 5% 10px;
+}
+
+/* About Us with flexbox */
+.about-us {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffe6ac;
+    padding: 10px;
+}
+
+
