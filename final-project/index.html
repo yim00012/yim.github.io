@@ -16,28 +16,32 @@
     <title>Final Project</title>
 </head>
 <body>
-    <header class="wrapper" id="home">
+    <header class="header" id="home">
         <!-- Nav bar with logo and search bar -->
-        <div class="nav">
-            <nav>
-                <img id="logo" src="images/logo.png" alt="logo">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#service">Services</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <!-- search bar -->
-                <input type="text" id="search" name="search" placeholder="Search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </nav>
+        <div class="wrapper">
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <li><img id="logo" src="images/logo.png" alt="logo"></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#service">Services</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <!-- search bar -->
+                        <li>
+                            <input type="text" id="search" name="search" placeholder="Search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </li>
+                    </ul>                
+                </nav>
+            </div>
         </div>
 
         <!-- Main banner -->
         <div class="banner">
-            <img src="images/main-banner.jpg" alt="main banner">
-            <div class="container-banner">
+            <!-- <img src="images/main-banner.jpg" alt="main banner"> -->
+            <div class="wrapper container-banner">
                 <h1>Welcome to Three Star Media</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ipsa rerum, id, omnis nobis rem excepturi aspernatur illo totam tempora praesentium enim magnam obcaecati officia voluptatibus deleniti molestias hic ipsum.</p>
                 <!-- button for connect with us -->
@@ -104,8 +108,8 @@
         </div>
         
         <!-- Our Vision -->
-        <div class="wrapper">
-            <img id="vision" src="images/vision.jpg" alt="vision">
+        <div class="wrapper" id="vision">
+            <!-- <img id="vision" src="images/vision.jpg" alt="vision"> -->
             <div class="our-vision">
                 <h3>Our Vision</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et fuga corrupti facilis voluptas nam tempore incidunt harum. Voluptatibus dolor animi repellendus omnis quibusdam fuga aut assumenda, tenetur facilis adipisci hic.</p>
@@ -116,17 +120,17 @@
 
         <!-- Our Team with flexbox -->
         <div class="wrapper" id="team">
+            <div class="heading"><h2>Our Team</h2></div>
             <div class="our-team">
-                <div class="heading"><h2>Our Team</h2></div>
-                <div class="pic-team"><img src="images/john.jpg" alt="John"></div>
-                <div class="container-team">
+                <div class="pic-j"><img src="images/john.jpg" alt="John"></div>
+                <div class="container-j">
                     <h3>John Doe</h3>
                     <h4>CEO and Co-owner</h4>
                     <hr>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, facilis! Magnam dolor aspernatur omnis cumque exercitationem qui libero eveniet accusamus corrupti molestiae sapiente vero voluptate, laborum quia illo eaque possimus?</p>
                 </div>
-                <div class="pic-team"><img src="images/bob.jpg" alt="Bob"></div>
-                <div class="container-team">
+                <div class="pic-d"><img src="images/bob.jpg" alt="Bob"></div>
+                <div class="container-d">
                     <h3>Bob Rite</h3>
                     <h4>CFO and Co-owner</h4>
                     <hr>
@@ -137,28 +141,23 @@
 
         <!-- Contact Us with flexbox -->
         <div class="wrapper" id="contact">
+            <div class="heading"><h2>Contact Us</h2></div>
             <div class="contact-us">
-                <div class="heading"><h2>Contact Us</h2></div>
                 <!-- Form -->
                 <div class="form">
                     <h3>Send us a message</h3>
                     <form action="#" method="get">
-                        <label for="fullname">Full Name</label><br>
+                        <label for="fullname">Full Name</label>
                         <input type="text" id="fullname" name="fname">
-                        <br>
-                        <label for="email">Email </label><br>
+                        
+                        <label for="email">Email </label>
                         <input type="email" id="email" name="email">
-                        <br>
-                        <label for="message">Message</label><br>
+                        
+                        <label for="message">Message</label>
                         <textarea id="message" name="message"></textarea>
-                        <br>
+                        
                         <button type="submit">Send</button>
                     </form>
-                </div>
-                <!-- Map -->
-                <div class="map">
-                    <h3>Location</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7215.73999763679!2d-75.69014911673654!3d45.40129597657512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1669129480880!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <!-- Table-->
                 <div class="table">
@@ -181,6 +180,11 @@
                         </tr>
                     </tbody>
                     </table>
+                </div>
+                <!-- Map -->
+                <div class="map">
+                    <h3>Location</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7215.73999763679!2d-75.69014911673654!3d45.40129597657512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20Ottawa%20Campus!5e0!3m2!1sen!2sca!4v1669129480880!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>

@@ -63,12 +63,12 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 1.5;
-    margin: auto;
 }
 
-div {
+.wrapper div {
     max-width: 1200px;
     position: relative;
+    margin: auto;
 }
 
 h1 {
@@ -87,7 +87,7 @@ h3 {
 }
 
 p {
-    margin: 1rem 0;
+    padding: .5rem 0;
 }
 
 a {
@@ -106,6 +106,7 @@ header, footer {
 .wrapper {
     width: 100%;
     margin: auto;
+    left: 0;
 }
 
 /* Nav bar area */
@@ -121,41 +122,246 @@ header, footer {
 
 li a {
     display: block;
+    width: 100%;
     text-align: center;
     text-decoration: none;
+    font-size: 16px;
     color: #c78c06;
-    /* background-color: #c78c06; */
+    background-color: #222;
     padding: 1rem;
 }
 
-li a:hover, a:active {
+li:nth-child(1) {
     background-color: #c78c06;
     color: #222;
 }
 
+li a:hover, li a:active {
+    background-color: #c78c06;
+    color: #222;
+    display: inline-block;
+    text-align: center;
+    border-style: none;
+}
+
 /* search bar */
 
+nav input {
+    width: calc(100% - 32px);
+    height: 32px;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+nav button {
+    background-color: #222;
+    border: 1px solid #c78c06;
+    height: 32px;
+    width: 32px;
+    float: right;
+}
+
+.fa-search {
+    color: #c78c06;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 /* main banner */
-.banner img {
+.banner {
+    background-image: url(../images/main-banner.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 500px;
     position: relative;
-    width: 100%;
 }
 
 .container-banner {
-    position: absolute;
+    position: inherit;
     background-color: rgba(22, 22, 22, .7) ;
     color: white;
     top: 10%;
     bottom: 10%;
+    margin: 0 auto;
     padding: 5% 10px;
+    max-width: 1200px;
+}
+
+.container-banner a {
+    background-color: #c78c06;
+    color: #222;
+    font-size: 20px;
+    padding: 1.3em;
+    display: inline-block;
+    margin: 10px 0;
 }
 
 /* About Us with flexbox */
+#about {
+    background-color: #ffe6ac;
+}
+
 .about-us {
     display: flex;
     flex-direction: column;
-    background-color: #ffe6ac;
     padding: 10px;
 }
 
+/* Our Service area */
+.our-services {
+    padding: 10px;
+}
 
+.card {
+    background-color: #ffe6ac;
+    margin: 10px 0;
+}
+
+.card h3, .card p {
+    padding: 10px;
+}
+
+.card a {
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    padding: 1.5em;
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Our Vision area */
+
+#vision {
+    background-image: url(../images/vision.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.our-vision {
+    color: white;
+    padding: 20px 10px;
+}
+
+.our-vision a {
+    background-color: #222;
+    border: 1px solid #c78c06;
+    color: white;
+    font-size: 16px;
+    padding: 1.5em;
+    display: inline-block;
+}
+
+/* Our Team with flexbox */
+.heading {
+    padding: 0 10px;
+}
+.our-team {
+    background-color: #ffe6ac;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-j, .container-d {
+    padding: 10px;
+}
+
+.our-team h4 {
+    font-weight: bold;
+}
+
+hr {
+    height: 2px;
+    background-color: #c78c06;
+    border: 0;
+}
+
+/* Contact Us with flexbox */
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.contact-us h3 {
+    padding-bottom: 10px;
+}
+
+/* Form Properties */
+.form {
+    padding: 10px;
+    line-height: 2em;
+}
+
+.form input {
+    width: 100%;
+    height: 2rem;
+    border: 1px solid #222;
+}
+
+.form textarea {
+    width: 100%;
+    height: 10rem;
+    border: 1px solid #222;
+    resize: none;
+    overflow: auto;
+}
+
+.form button {
+    background-color: #222;
+    color: #c78c06;
+    font-size: 18px;
+    border: 0;
+}
+
+/* Map properites */
+.map {
+    padding: 10px;
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+}
+
+/* Table properties */
+.table {
+    padding: 10px;
+    width: 100%;
+}
+table {
+    width: 100%;
+}
+
+tr {
+    height: 50px;
+}
+
+th {
+    background-color: #ffe6ac;
+    vertical-align: middle;
+    border: 1px solid #222;
+}
+
+th:nth-child(1) {
+    width: 60%;
+}
+
+td {
+    vertical-align: middle;
+    padding: 10px;
+    border: 1px solid #222;
+}
+
+/* Footer properties */
+.copyright {
+    color: #c78c06;
+    padding: 20px;
+    line-height: 2em;
+}
+
+.copyright a {
+    color: #c78c06;
+    text-decoration: underline;
+}
