@@ -65,12 +65,6 @@ body {
     line-height: 1.5;
 }
 
-.wrapper div {
-    max-width: 1200px;
-    position: relative;
-    margin: auto;
-}
-
 h1 {
     font-size: 3.5rem;
     font-weight: bold;
@@ -79,11 +73,13 @@ h1 {
 h2 {
     font-size: 2.5rem;
     font-weight: bold;
+    margin-top: .5em;
 }
 
 h3 {
     font-size: 1.5rem;
     font-weight: bold;
+    margin-top: .5rem;
 }
 
 p {
@@ -109,7 +105,17 @@ header, footer {
     left: 0;
 }
 
+/* set the max-width of the container */
+.wrapper div {
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+/********** Header **********/
+
 /* Nav bar area */
+
 .nav {
     background-color: #222;
     padding: 10px;
@@ -120,7 +126,7 @@ header, footer {
     width: auto;
 }
 
-li a {
+nav a {
     display: block;
     width: 100%;
     text-align: center;
@@ -133,10 +139,10 @@ li a {
 
 li:nth-child(1) {
     background-color: #c78c06;
-    color: #222;
 }
 
-li a:hover, li a:active {
+/* Change the color of links on hover and active */
+li a:hover, .active {
     background-color: #c78c06;
     color: #222;
     display: inline-block;
@@ -144,10 +150,11 @@ li a:hover, li a:active {
     border-style: none;
 }
 
-/* search bar */
+/* Search bar */
 
 nav input {
-    width: calc(100% - 32px);
+    /* Calculates the width of the search bar to put the button on its right side */
+    width: calc(100% - 33px);
     height: 32px;
     font-size: 16px;
     margin: 0 auto;
@@ -168,6 +175,7 @@ nav button {
 }
 
 /* main banner */
+
 .banner {
     background-image: url(../images/main-banner.jpg);
     background-size: cover;
@@ -176,6 +184,7 @@ nav button {
     position: relative;
 }
 
+/* Center components inside at a max width of 1200px */
 .container-banner {
     position: inherit;
     background-color: rgba(22, 22, 22, .7) ;
@@ -196,7 +205,11 @@ nav button {
     margin: 10px 0;
 }
 
+/********** Main **********/
+
 /* About Us with flexbox */
+
+/* set the bg color and horizontally expand ignoring the max-width limit */
 #about {
     background-color: #ffe6ac;
 }
@@ -208,13 +221,13 @@ nav button {
 }
 
 /* Our Service area */
-.our-services {
-    padding: 10px;
+
+.our-services div {
+    margin: 10px;
 }
 
-.card {
+.our-services .card {
     background-color: #ffe6ac;
-    margin: 10px 0;
 }
 
 .card h3, .card p {
@@ -232,6 +245,7 @@ nav button {
 
 /* Our Vision area */
 
+/* set the bg image and horizontally expand ignoring the max-width limit */
 #vision {
     background-image: url(../images/vision.jpg);
     background-size: cover;
@@ -253,17 +267,29 @@ nav button {
 }
 
 /* Our Team with flexbox */
-.heading {
-    padding: 0 10px;
+
+.our-team .heading {
+    width: 100%;
+    background-color: white;
+    margin-bottom: 10px;
 }
+
 .our-team {
-    background-color: #ffe6ac;
-    margin: 10px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.container-j, .container-d {
+.our-team div {
+    margin: 0;
+}
+
+.our-team img {
+    display: block;
+}
+
+.container-j, .container-b {
+    background-color: #ffe6ac;
     padding: 10px;
 }
 
@@ -271,6 +297,7 @@ nav button {
     font-weight: bold;
 }
 
+/* style the bar in the containers */
 hr {
     height: 2px;
     background-color: #c78c06;
@@ -278,6 +305,17 @@ hr {
 }
 
 /* Contact Us with flexbox */
+
+.contact-us div {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.contact-us .heading {
+    width: 100%;
+    padding-bottom: 0;
+}
+
 .contact-us {
     display: flex;
     flex-direction: column;
@@ -315,16 +353,6 @@ hr {
     border: 0;
 }
 
-/* Map properites */
-.map {
-    padding: 10px;
-    width: 100%;
-}
-
-iframe {
-    width: 100%;
-}
-
 /* Table properties */
 .table {
     padding: 10px;
@@ -354,6 +382,18 @@ td {
     border: 1px solid #222;
 }
 
+/* Map properites */
+.map {
+    padding: 10px;
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+}
+
+/********** Footer **********/
+
 /* Footer properties */
 .copyright {
     color: #c78c06;
@@ -364,4 +404,135 @@ td {
 .copyright a {
     color: #c78c06;
     text-decoration: underline;
+}
+
+
+/*******************************************************
+ Adds media query for the screen size of 760px and above
+ *******************************************************/
+
+@media screen and (min-width: 760px) {
+    /* set nav bar horizontally */
+    .nav {
+        height: 100%;
+    }
+
+    nav ul {
+        width: 100%;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav a {
+        padding: 1rem 2rem;
+    }
+    
+    li:nth-child(1) {
+        background: none;
+    }
+    
+    /* set flex-dirextion horizontally on About Us */
+    .about-us {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .pic-us {
+        flex-basis: 50%;
+    }
+    
+    .container-us {
+        padding: 15px;
+        flex-basis: 50%;
+    }
+
+    /* set grid on Our Services */
+    .our-services .heading {
+        grid-area: heading;
+    }
+    
+    .digital {
+        grid-area: digital;
+    }
+
+    .marketing {
+        grid-area: marketing;
+    }
+
+    .video {
+        grid-area: video;
+    }
+
+    .web {
+        grid-area: web;
+    }
+
+    .print {
+        grid-area: print;
+    }
+    
+    .our-services {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+        "heading heading heading heading heading heading"
+        "digital digital digital marketing marketing marketing"
+        "video video web web print print"
+        ;
+    }
+
+    .card a {
+        width: calc(100% - 20px);
+    }
+
+    /* set the flexbox on Our Team in different order */
+    .our-team {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .pic-j {
+        flex-basis: 50%;
+    }
+
+    .container-j {
+        flex-basis: 50%;
+    }
+
+    .pic-b {
+        order: 1;
+        flex-basis: 50%;
+    }
+    
+    .container-b {
+        flex-basis: 50%;
+    }
+
+    /* set the flexbox on Our Team in different order */
+    .contact-us {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .form {
+        flex-basis: 50%;
+        height: 100%;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start; */
+    }
+
+    .map {
+        flex-basis: 50%;
+    }
+    
+    .table {
+        order: 1;
+        flex-basis: 100%;
+    }
 }
